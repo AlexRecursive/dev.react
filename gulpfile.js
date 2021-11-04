@@ -23,7 +23,11 @@ const js = () => {
 }
 
 exports.default = () => {
-  watch('source/js/**/*.js',{
+  watch([
+    'source/js/**/*.js',
+    'source/js/**/*.ts',
+    'source/js/**/*.tsx'
+  ],{
     ignoreInitial: false,
     events: 'all'
   }, js)
