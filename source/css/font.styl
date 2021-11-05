@@ -1,0 +1,25 @@
+font-url(file)
+  return 'font/' + file
+
+webfont(family, file, weight, style)
+  @font-face
+    font-family family
+    src url(font-url(file + '.woff2')) format('woff2'),
+        url(font-url(file + '.woff')) format('woff')
+    font-weight weight
+    font-style style
+    font-display swap
+
+
+webfont(Source Sans Pro, SourceSansPro-Black, 900, normal)
+webfont(Source Sans Pro, SourceSansPro-BlackItalic, 900, italic)
+webfont(Source Sans Pro, SourceSansPro-Bold, bold, normal)
+webfont(Source Sans Pro, SourceSansPro-BoldItalic, bold, italic)
+webfont(Source Sans Pro, SourceSansPro-ExtraLight, 200, normal)
+webfont(Source Sans Pro, SourceSansPro-ExtraLightItalic, 200, italic)
+webfont(Source Sans Pro, SourceSansPro-Italic, normal, italic)
+webfont(Source Sans Pro, SourceSansPro-Light, 300, normal)
+webfont(Source Sans Pro, SourceSansPro-LightItalic, 300, italic)
+webfont(Source Sans Pro, SourceSansPro-Regular, normal, normal)
+webfont(Source Sans Pro, SourceSansPro-SemiBold, 600, normal)
+webfont(Source Sans Pro, SourceSansPro-SemiBoldItalic, 600, italic)
